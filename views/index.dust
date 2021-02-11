@@ -1,0 +1,7 @@
+{>"layout" /}
+{<body}
+<div class="container-fluid fluid-y-scroll h_fit b_transparent" style="background:transparent !important">
+    <section id="root">
+    </section>
+</div>
+{/body}

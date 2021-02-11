@@ -1,0 +1,17 @@
+{>"layout" /}
+<div class="wrapper error">
+   <div class="content">
+      <div class="main-content container-fluid">
+         <div class="error-container">
+            <div class="error-number">{error.status}</div>
+            <div class="error-description">{message}</div>
+            <div class="btn-description">Please Contact System Admin</div>
+            {?error}
+              <pre class="error-stack-trace">{error.stack}</pre>
+            {/error}
+            <div class="btn-back"><a class="btn-primary" href="/home">Let's go home</a></div>
+            <div class="footer">© 2020 Groupon Team</div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,44 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Shreya@2019",
+    "database": "lottery_firecompass",
+    "host": "localhost",
+    "port": "3306",
+    "dialect": "mysql",
+    "pool": {
+      "max": 10,
+      "min": 1,
+      "idle": 10000
+    },
+    "define": {
+      "paranoid": true
+    },
+    "operatorsAliases": 1
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": 1
+  },
+  "production": {
+    "username": "root",
+    "password": "password",
+    "database": "server_database_name",
+    "host": "server_host",
+    "port": "3306",
+    "dialect": "mysql",
+    "pool": {
+      "max": 10,
+      "min": 1,
+      "idle": 10000
+    },
+    "define": {
+      "paranoid": true
+    },
+    "operatorsAliases": 1
+  }
+}

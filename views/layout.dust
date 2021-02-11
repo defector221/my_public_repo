@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Groupon</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine ">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans ">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display ">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+
+{^showLoader}
+<!--[if lt IE 9]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<![endif]-->
+{:else}
+<link rel="stylesheet" type="text/css" href="/assets/css/error.css">
+{/showLoader}
+</head>
+<body class="{errorClass}">
+{^showLoader}
+<div id="preloader" class="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+{/showLoader}
+{+body /}
+{^showLoader}
+{>"requirejs_include" /}
+{/showLoader}
+</body>
+</html>
