@@ -79,8 +79,8 @@ var config = {
             'resolve-i18n': 'amdi18n-loader',
             es6:'custom-es6-loader',
             'popper.js':'@popperjs/dist/cjs/popper',
-            underscore:'underscore/underscore-min',
-            backbone:'backbone/backbone-min'
+            'react-is':'react-is/index',
+            '@material-ui': '@material-ui'
         }
     },
     module:{

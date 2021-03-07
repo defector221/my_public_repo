@@ -9,31 +9,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var dust = require('express-dustjs');
-var log = require('./logger');
 var helmet = require('helmet');
-const cron = require('node-cron');
-const BOOK_CONTAINER = require('./Books.Container');
 var appController = require('./controllers/AppController') ;
 var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
 
 var app = express();
-app.set('x-powered-by', 'saranlive');
-
-/*
- books parsing on server restart
-*/
-
-BOOK_CONTAINER.parse();
-
-/*
- corn job scheduler saving books on every 1 minute
-*/
-cron.schedule('* * * * *', function() {
-  log.info('saving books ...')
-  BOOK_CONTAINER.save();
-  log.info('books saved');
-});
+app.set('x-powered-by', 'ally');
 
 // Dustjs settings
 dust._.optimizers.format = function (ctx, node) {
