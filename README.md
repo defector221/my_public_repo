@@ -4,7 +4,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* This is for Groupon test Assignment
+* This is for Ally test Assignment
 * Version 0.0.1
 
 ### Prerequisites ###

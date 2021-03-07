@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.books-container {
+.okr-container {
   display: block;
   position: absolute;
   width: 100%;
@@ -19,232 +19,49 @@
   justify-content: center;
 }
 
-.books-container-header{
+.okr-container-header{
   height: 60px;
   width: 100%;
-  background: #2f2f2f
+  background:#fff;
+  margin-top: 60px !important;
 }
 
 .wid33{
   width: 33% !important;
 }
 
-.userName{
-    width: 100%;
-    background: #3a7bb5;
+.MuiTreeItem-label{
+  text-align: initial !important;
 }
 
-.userName > p{
-  padding: 10px;
-  font-size: 14px;
-  color: #fff;
-  text-decoration: none;
-}
-
-a{
-  text-decoration: none;
-  cursor: pointer;
-}
-
-img{
-  width: 100%;
-}
-
-.imgTile{
-  height: 156px !important;
-}
-
-.tile{
-  float: left;
-  float: left;
-  padding: 30px;
-  position: relative;
-  padding-right: 15px;
-}
-
-.btn{
-  width: auto !important;
-  float: right;
-}
-
-.btn-success{
-    width: 100%;
-    padding: 7px;
-    margin: 5px;
-    background: #1a3f75;
-    outline: 0;
-    outline-color: transparent;
-    outline-width: 0;
-    border: 0;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.books-container-flex img{
-  width: 100% !important;
-  max-height: 406px !important;
-}
-
-
-.btn-reject{
-  width: 100%;
-  padding: 7px;
-  margin: 5px;
-  background: #ad4c4c;
-  color: #fff;
-  outline: 0;
-  outline-color: transparent;
-  outline-width: 0;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.profile-info-right{
-  float: left;
-  padding: 20px;
-}
-
-.btn-container{
-  width: 100%;
-  margin-top: 5px;
-}
-
-.profile-img{
-    height: 156px;
-    width: 230px;
-    float: left;
-}
-
-.profile{
-  padding: 20px;
-}
-
-.controls{
-  width: 100%;
-  padding: 10px;
-  float: left;
-}
-
-.books_view{
-  width: 700px;
-  padding: 20px;
-}
-
-.tile .h5{
-  font-weight: bold !important;
-}
-
-.tile .card-text{
-  max-height: 150px !important;
-  overflow: auto !important;
-  text-overflow: ellipsis !important;
-  text-align: justify !important;
-}
-.tile button{
-  margin: 5px 4px !important;
-}
-
-.tile .card-subtitle{
-  font-size: 12px !important;
-  color: #5a5959 !important;
-  margin-bottom: 10px !important;
-}
-
-.form-container-books{
-    border: 1px solid #ccc;
-    top: 50%;
-    position: absolute;
-    transform: translate(-10%, -50%);
-    padding: 23px;
-    width:80%;
-}
-
-.b_transparent{
-  padding-left:0 !important;
-}
-
-.m_card .card-img-top{
-  max-height: 100px;
-}
-
-.m_card_input input{
-  padding: 5px;
-  margin: 9px;
-  width: 100%;
-  float: left
-}
-
-.lottery{
-    float: left;
-    right: 0;
-    position: relative;
-    left: 40px;
-    margin-top: 20px;
-}
-
-.d-inline-block{
-    float: left;
-    right: 0;
-    position: relative;
-    left: -126px;
-    top: 10px;
-    margin-top: 20px;
-}
-
-.lottery_cont{
-  float: left;
-}
-
-.lottery_info{
-  padding: 14px;
-  color: #000;
-  position: relative;
-}
-
-.lottery_info span{
-    padding: 5px;
-    left: 34%;
-    position: relative;
-    font-family: cursive;
-    font-size: 16px;
-}
-
-.lottery_info_img{
-  max-height: 200px;
-}
-
-.lottery_info_section{
-  width: 100%;
+.root{
   height: 100%;
-  position: absolute;
-  z-index: 1221112;
-  background: #000000e6;
+  width: 100%;
 }
 
-.lottery_info_section .alert-success{
-  max-width: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .MuiTreeItem-label{
+  background-color : #fff !important;
+}
+.MuiTreeItem-label{
+  padding: 15px !important;
+  margin-left: 10px !important;
 }
 
-.lottery_info_block{
-  padding: 10px;
-  background: #ccc;
-  word-break: break-all;
-  border: 1px solid #e01919;
-  border-top: none;
-  border-right: none;
-  margin: 8px;
-  color:red;
-  border-bottom: none;
-  margin: 8px;
+.MuiTreeItem-root{
+  padding:0px 30px !important
 }
 
-.dashboard_btn{
-  margin: 50px;
-  margin-top: 0;
-  margin-bottom: 0;
+.container-fluid{
+  padding: 0 !important;
+}
+
+select{
+  padding: 20px;
+  margin: 5px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: 0;
+  float: right;
+  margin-right: 30px;
 }

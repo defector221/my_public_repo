@@ -1,15 +1,11 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import Home from "./Home";
-import Book from "./Book";
-import CreateBook from "./CreateBook";
-import UpdateBook from "./UpdateBook";
-import ErrorBoundary from "./ErrorBoundary";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import rootReducer  from '../reducers/rootReducer';
+import OKRTreeView from "./OKR";
 
 const store = createStore(rootReducer);
 
@@ -27,62 +23,39 @@ function App(props) {
   return (
     <Router>
       <div className="App">
-        <div className="books-container">
-          <ErrorBoundary>
+        <div className="okr-container">
             <div className="books-container-header">
               <a href="/home">
                 <Header src="/images/logo.png"></Header>
               </a>
             </div>
-            <div className="books-container-body">
+            <div className="okr-container-body">
               <Route exact={true} path={'/'}>
-                <Home />
+                <OKRTreeView />
               </Route>
               <Route exact={true} path={'/home'}>
-                <Home />
+                <OKRTreeView />
               </Route>
-              <Route exact={true} path={'/books/open/:id'} render={({ match }) => ( 
-                  <React.Fragment>
-                  <div className='form-container row justify-content-md-center'>
-                    <Book id={match.params.id} />
-                  </div>
-                </React.Fragment>
-              )}>
-              </Route>
-              <Route exact={true} path={'/books/edit/:id'} render={({ match }) => ( 
-                  <React.Fragment>
-                    <div className='form-container row justify-content-md-center'>
-                      <UpdateBook id={match.params.id} />
-                    </div>
-                  </React.Fragment>
-              )}>
-              </Route>
-              <Route exact={true} path={'/books/create/new'}>
-                <div className='form-container row justify-content-md-center'>
-                    <CreateBook />
-                </div>
-              </Route>
-            </div>
-          </ErrorBoundary>
+              </div>
         </div>
       </div>
     </Router>
   );
 }
 
-const getBook = () => {
-  return fetch('/api/v1/books/all')
+const getOKR = () => {
+  return fetch('https://okrcentral.github.io/sample-okrs/db.json')
     .then(response => response.json())
-    .then(json => store.dispatch(resolvedGetBook(json)))
+    .then(json => store.dispatch(resolvedGetOKR(json)))
 }
 
-const resolvedGetBook = (json) => {
+const resolvedGetOKR = (json) => {
   return {
-    type: 'RESOLVED_BOOK',
-    books: json.books
+    type: 'RESOLVED_OKR',
+    OKR: json.data
   }
 }
 
-getBook();
+getOKR();
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);

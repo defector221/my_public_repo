@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Groupon</title>
+<title>Ally.io</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="msapplication-TileColor" content="#ffc40d">
@@ -26,11 +26,6 @@
 {/showLoader}
 </head>
 <body class="{errorClass}">
-{^showLoader}
-<div id="preloader" class="preloader">
-  <div id="status">&nbsp;</div>
-</div>
-{/showLoader}
 {+body /}
 {^showLoader}
 {>"requirejs_include" /}
